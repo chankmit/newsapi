@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content> 
+    <ion-list>
+        <ion-item *ngFor="let user of contact">
+          <ion-thumbnail item-start>
+            <img src="{{user.image}}">
+          </ion-thumbnail>
+          <h2>{{user.name}}</h2>
+          <p>{{user.position}}</p>
+          <a href="tel:phone" ion-button clear item-end>โทรศัพท์</a>
+        </ion-item>
+      </ion-list>
+</ion-content>

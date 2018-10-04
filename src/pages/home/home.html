@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>ข่าวกิจกรรม</h2>
+
+  <ion-card *ngFor="let item of news">
+    <img src="{{ item.urlToImage}}" *ngIf="item.urlToImage" (click)="goToDetail(item)"/>
+    <img src="assets/imgs/spider.jpg" *ngIf="item.urlToImage == null" (click)="goToDetail(item)"/>
+    <ion-card-content>
+      <ion-card-title>
+       {{ item.title }}
+      </ion-card-title>
+      <p>
+        {{ item.description }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
